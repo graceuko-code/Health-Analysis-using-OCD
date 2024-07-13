@@ -11,3 +11,18 @@ Obsessive-Compulsive Disorder (OCD) is a chronic mental health condition charact
 ### Data Sources
 
 OCD Patient Dataset: This dataset is obtained from Kaggle [ocd_patient_dataset.csv](https://www.kaggle.com/datasets/ohinhaque/ocd-patient-dataset-demographics-and-clinical-data)
+
+### Tools
+
+- Excel - Data Cleaning 
+- SQL - Data Analysis
+- Power BI - Creating the Report
+
+### Data Cleaning and Preparation
+
+In the initial data preparation phase, we perform the following tasks:
+1. Data loading and inspection
+2. Handling missing values
+3. Data cleaning and formatting
+
+### Data Exploration
