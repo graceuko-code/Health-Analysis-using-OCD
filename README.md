@@ -25,4 +25,8 @@ In the initial data preparation phase, we perform the following tasks:
 2. Handling missing values
 3. Data cleaning and formatting
 
-### Data Exploration
+### Exploratory Data Analysis
+This involved exploring the dataset to answer key questions, such as:
+
+- What are the count and Percentage  of Females vs. males with OCD and Average Obsessions?
+- What are the Count and Average scores by Ethnicities and their respective average obsession score with OCD?
