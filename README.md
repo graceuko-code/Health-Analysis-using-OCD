@@ -28,5 +28,8 @@ In the initial data preparation phase, we perform the following tasks:
 ### Exploratory Data Analysis
 This involved exploring the dataset to answer key questions, such as:
 
-- What are the count and Percentage  of Females vs. males with OCD and Average Obsessions?
-- What are the Count and Average scores by Ethnicities and their respective average obsession score with OCD?
+- What is the total number of patients diagnosed per year?
+- What is the number and percentage of patients by gender?
+- What is the number and percentage of patients by ethnicity?
+- What is the number and percentage of patients by type of compulsion?
+- What is the most common Obsession Type (count) & its respective Average Obsession Score?
