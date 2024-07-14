@@ -28,7 +28,7 @@ In the initial data preparation phase, we perform the following tasks:
 ### Exploratory Data Analysis
 This involved exploring the dataset to answer key questions, such as:
 
-- What is the total number of patients diagnosed per year?
+- What is the total number of patients diagnosed per Month?
 - What is the number and percentage of patients by gender?
 - What is the number and percentage of patients by ethnicity?
 - What is the number and percentage of patients by type of compulsion?
@@ -37,6 +37,38 @@ This involved exploring the dataset to answer key questions, such as:
 ### Analysis
 
 #### Descriptive Statistics using SQL
+
+ Giving answers to the key questions; 
+
+###### What is the total number of patients diagnosed per Month?
+
+```sql
+-- First convert the datatype from text to date
+SELECT 
+  CAST(REPLACE(`OCD Diagnosis Date`, '-', '/') AS Date) 
+FROM
+  ocd_patient.ocd_patient_dataset;
+UPDATE ocd_patient.ocd_patient_dataset 
+SET `OCD Diagnosis Date` = REPLACE(`OCD Diagnosis Date`, '-', '/');
+ALTER TABLE ocd_patient.ocd_patient_dataset CHANGE COLUMN `OCD Diagnosis Date` `OCD Diagnosis Date` VARCHAR(20);
+UPDATE ocd_patient.ocd_patient_dataset 
+SET `OCD Diagnosis Date` = DATE_FORMAT(STR_TO_DATE(`OCD Diagnosis Date`, '%d/%m/%Y'), '%Y-%m-%d');
+ALTER TABLE ocd_patient.ocd_patient_dataset MODIFY COLUMN `OCD Diagnosis Date` DATE;
+DESC ocd_patient.ocd_patient_dataset;
+
+-- Count the number of patients diagnosed with OCD Per Month
+SELECT 
+  DATE_FORMAT(`OCD Diagnosis Date`, '%Y-%m-01 00:00:00') AS Month, 
+  COUNT(`Patient ID`) patien_count 
+FROM
+  ocd_patient.ocd_patient_dataset 
+GROUP BY 
+  1 
+ORDER BY
+  1;
+```
+
+###### What is the number and percentage of patients by gender?
 
 ```sql
 WITH DATA AS(
