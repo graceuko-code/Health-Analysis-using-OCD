@@ -33,3 +33,31 @@ This involved exploring the dataset to answer key questions, such as:
 - What is the number and percentage of patients by ethnicity?
 - What is the number and percentage of patients by type of compulsion?
 - What is the most common Obsession Type (count) & its respective Average Obsession Score?
+
+### Analysis
+
+#### Descriptive Statistics using SQL
+
+```sql
+WITH DATA AS(
+  SELECT 
+    Gender, 
+    COUNT(`Patient ID`) AS Patient_count, 
+    ROUND(AVG(`Y-BOCS Score (Obsessions)`), 2) AS avg_obs_score 
+  FROM 
+    ocd_patient_dataset 
+  GROUP BY 1
+) 
+SELECT 
+  SUM(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END) AS count_female, 
+  SUM(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END) AS count_male, 
+  ROUND(SUM(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)/ 
+  (SUM(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)+ 
+  SUM(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END))* 100, 2 ) AS pct_female, 
+
+  ROUND(SUM(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END)/ 
+  (SUM(CASE WHEN Gender = 'Female' THEN patient_count ELSE 0 END)+
+  SUM(CASE WHEN Gender = 'Male' THEN patient_count ELSE 0 END))* 100, 2) AS pct_male 
+FROM 
+  DATA;
+```
