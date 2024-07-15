@@ -145,9 +145,17 @@ ORDER BY 2;
 2. Ethnicity Breakdown:
 
  - **Caucasian:** 398 patients
- - **African American:** 324 patients
- - **Asian:** 386 patients
  - **Hispanic:** 392 patients
+ - **Asian:** 386 patients
+ - **African:** 324 patients
  - Ethnic differences in distribution were noted, with Caucasian patients reporting the highest number of patients and Africans reporting the lowest number of patients.
-   
-   
+
+3. Types of Compulsions:
+
+ - **Washing:** 320 patients
+ - **Counting:** 316 patients
+ - **Checking:** 292 patients
+ - **Praying:** 286 patients
+ - **Ordering:** 285 patients
+
+
