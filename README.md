@@ -31,7 +31,7 @@ This involved exploring the dataset to answer key questions, such as:
 - What is the total number of patients diagnosed per Month?
 - What is the number and percentage of patients by gender?
 - What is the number and percentage of patients by ethnicity?
-- What is the number and percentage of patients by type of compulsion?
+- What is the number and average score of patients by type of compulsion?
 - What is the most common Obsession Type (count) & its respective Average Obsession Score?
 
 ### Analysis
@@ -42,7 +42,7 @@ This involved exploring the dataset to answer key questions, such as:
 
 ###### What is the total number of patients diagnosed per Month?
 
-```sql
+```SQL
 -- First convert the datatype from text to date
 SELECT 
   CAST(REPLACE(`OCD Diagnosis Date`, '-', '/') AS Date) 
@@ -70,7 +70,7 @@ ORDER BY
 
 ###### What is the number and percentage of patients by gender?
 
-```sql
+```SQL
 WITH DATA AS(
   SELECT 
     Gender, 
@@ -93,3 +93,61 @@ SELECT
 FROM 
   DATA;
 ```
+
+###### What is the number and percentage of patients by ethnicity?
+
+```SQL
+SELECT 
+  Ethnicity, 
+  COUNT(`Patient ID`) AS Patient_count, 
+  AVG(`Y-BOCS Score (Obsessions)`) AS Obs_score 
+FROM 
+  ocd_patient.ocd_patient_dataset 
+GROUP BY 
+  1;
+```
+
+###### What is the number and average score of patients by type of compulsion?
+
+```SQL
+SELECT 
+  `Compulsion Type`, 
+  COUNT(`Patient ID`) AS patient_count, 
+  ROUND(AVG(`Y-BOCS Score (Compulsions)`), 2) AS comp_score 
+FROM 
+  ocd_patient.ocd_patient_dataset 
+GROUP BY 1 
+ORDER BY 2;
+```
+
+###### What is the most common Obsession Type (count) & its respective Average Obsession Score?
+
+```SQL
+SELECT 
+  `Obsession Type`, 
+  COUNT(`Patient ID`) AS patient_count, 
+  ROUND(
+    AVG(`Y-BOCS Score (Obsessions)`), 2) AS obs_score 
+FROM
+  ocd_patient.ocd_patient_dataset 
+GROUP BY 1 
+ORDER BY 2;
+```
+
+### Key Findings
+
+1. Gender Distribution
+   
+  - **Male Patients:** 50.2% (753 Patients)
+  - **Female Patients:** 49.8% (747 Patients)
+  - There was no significant gender difference observed in the severity of OCD symptoms.
+
+2. Ethnicity Breakdown:
+
+ - **Caucasian:** 398 patients
+ - **African American:** 324 patients
+ - **Asian:** 386 patients
+ - **Hispanic:** 392 patients
+ - Ethnic differences in distribution were noted, with Caucasian patients reporting the highest number of patients and Africans reporting the lowest number of patients.
+   
+   
