@@ -138,24 +138,38 @@ ORDER BY 2;
 
 1. Gender Distribution
    
-  - **Male Patients:** 50.2% (753 Patients)
-  - **Female Patients:** 49.8% (747 Patients)
-  - There was no significant gender difference observed in the severity of OCD symptoms.
+   - **Male Patients:** 50.2% (753 Patients)
+   - **Female Patients:** 49.8% (747 Patients)
+   - There was no significant gender difference observed in the severity of OCD symptoms.
 
 2. Ethnicity Breakdown:
 
- - **Caucasian:** 398 patients
- - **Hispanic:** 392 patients
- - **Asian:** 386 patients
- - **African:** 324 patients
- - Ethnic differences in distribution were noted, with Caucasian patients reporting the highest number of patients and Africans reporting the lowest number of patients.
+   - **Caucasian:** 398 patients
+   - **Hispanic:** 392 patients
+   - **Asian:** 386 patients
+   - **African:** 324 patients
+   - Ethnic differences in distribution were noted, with Caucasian patients reporting the highest number of patients and Africans reporting the lowest number of patients.
 
 3. Types of Compulsions:
 
- - **Washing:** 320 patients
- - **Counting:** 316 patients
- - **Checking:** 292 patients
- - **Praying:** 286 patients
- - **Ordering:** 285 patients
+   - **Washing:** 320 patients
+   - **Counting:** 316 patients
+   - **Checking:** 292 patients
+   - **Praying:** 286 patients
+   - **Ordering:** 285 patients
 
+4. Types of Obsessions:
+ 
+   - **Harm-related:** 333 patients
+   - **Contamination:** 306 patients
+   - **Religious:** 303 Patients
+   - **Symmetry:** 280 patients
+   - **Hoarding:** 278 patients
 
+5. Number of Diagnoses:
+   - OCD patients were diagnosed every month from November 2013 to November 2022.
+   - The highest number of patients was observed in March 2018, which was 25, and the lowest number was observed in November 2018, which was 2 patients.
+
+### Conclusion
+
+This analysis of OCD health data is focused on gender, ethnicity, compulsion types, obsession scores, and Number of patient diagnoses. It exposes some key facts among patients with OCD disease as it contributes to a better understanding and management of OCD across diverse populations.
