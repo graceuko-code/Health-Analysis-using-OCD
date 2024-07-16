@@ -1,5 +1,17 @@
 # OCD HEALTH ANALYSIS
 
+### Table of Content
+
+- [Project Overview](#project-overview)
+- [Background](#background)
+- [Data Sources](#data-sources)
+- [Tools](#tools)
+- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Analysis](#analysis)
+- [Key Findings](#key-findings)
+- [Conclusion](#conclusion)
+
 ### Project Overview
 
 This is to find out some facts about people living with OCD disease. This analysis aims to provide detailed insights into the prevalence, trends, and characteristics of OCD across different demographic groups. The dataset is obtained from Kaggle. It is a fictional dataset, so facts from this dataset shouldn’t be used for real-life assumptions.
